@@ -6,6 +6,8 @@ File này quy định cách phát hiện sớm rủi ro thiết kế và in trê
 
 Các kiểm tra phụ thuộc vật liệu phải áp dụng thêm [material.md](material.md) ngay từ lúc nhận yêu cầu và chạy lại khi đổi vật liệu, màu, nozzle hoặc profile.
 
+Với nhiều part, áp dụng thêm [plate-layout.md](plate-layout.md) để quyết định bố cục in và kiểm tra brim/support, mép plate cùng trình tự in.
+
 Máy mặc định là **Bambu Lab P2S Full Combo** theo lựa chọn của người dùng. Tên cấu hình này không tự xác định nozzle, vật liệu, bàn in, phụ kiện đang lắp hay profile; các mục đó vẫn phải được ghi hoặc đánh dấu `Chưa chọn` cho từng lần in.
 
 Không coi việc Fusion tạo được model hoặc Bambu Studio slice thành công là bằng chứng chi tiết sẽ in đạt yêu cầu. Một cảnh báo chỉ được đóng khi đã sửa, đã kiểm chứng bằng dữ liệu phù hợp, hoặc người dùng chấp nhận rủi ro có ghi lại.

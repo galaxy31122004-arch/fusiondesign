@@ -25,6 +25,7 @@ Xây quy trình thống nhất từ thiết kế tham số trong Autodesk Fusion
 
 - Đọc [docs/rules/printability.md](docs/rules/printability.md) trước khi lập kế hoạch tạo hoặc sửa bất kỳ model nào. File này quy định kiểm tra từ lúc nhận yêu cầu, trong lúc thiết kế và trước khi chuyển sang Bambu Studio.
 - Đọc [docs/rules/material.md](docs/rules/material.md) khi chọn vật liệu hoặc profile in. Dùng đúng cấu hình P2S, nozzle và vật liệu của project; không chép cứng thông số của một preset làm mặc định cho mọi cuộn nhựa.
+- Khi có nhiều part, đọc [docs/rules/plate-layout.md](docs/rules/plate-layout.md) trước khi quyết định xếp chung hay tách plate; ghi lý do và bằng chứng trong project.
 - Mỗi project phải tạo một bản ghi kiểm tra theo các giai đoạn trong file đó. Không bỏ qua cảnh báo chỉ vì model tạo được trong Fusion hoặc slice thành công.
 - Chỉ áp dụng ngưỡng cụ thể khi nguồn và điều kiện áp dụng đã được ghi rõ. Nếu chưa có căn cứ, giữ trạng thái `Chưa xác minh` và đề xuất phép kiểm tra hoặc mẫu in thử.
 
