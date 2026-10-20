@@ -12,9 +12,10 @@ SCRIPT_DIR = os.path.dirname(os.path.realpath(__file__))
 PROJECT_ROOT = os.path.abspath(os.path.join(SCRIPT_DIR, '..', '..', '..',
                                             'projects', 'box-hybrid-lora'))
 OUTPUT = os.path.join(PROJECT_ROOT, 'design', 'box-hybrid-lora_v1.0.0.f3d')
-BODY_MESH = os.path.join(PROJECT_ROOT, 'runs', 'mesh', 'box-hybrid-lora_v1.0.0_body.3mf')
-LID_MESH = os.path.join(PROJECT_ROOT, 'runs', 'mesh', 'box-hybrid-lora_v1.0.0_lid.3mf')
-REPORT = os.path.join(PROJECT_ROOT, 'runs', 'fusion_v1.0.0_run.txt')
+RUN_DIR = os.path.join(PROJECT_ROOT, 'runs', datetime.now().strftime('%Y%m%d') + '-fusion-export')
+BODY_MESH = os.path.join(RUN_DIR, 'mesh', 'box-hybrid-lora_v1.0.0_body.3mf')
+LID_MESH = os.path.join(RUN_DIR, 'mesh', 'box-hybrid-lora_v1.0.0_lid.3mf')
+REPORT = os.path.join(RUN_DIR, 'logs', 'fusion_v1.0.0_run.txt')
 
 
 def rectangle(sketch, length_expression, width_expression):
@@ -341,7 +342,7 @@ def add_lid_clearance_holes(lid, positions):
 
 def close_older_project_tabs(app, current_document):
     notes = []
-    backup_dir = os.path.join(PROJECT_ROOT, 'runs', 'session_backups')
+    backup_dir = os.path.join(RUN_DIR, 'session_backups')
     for document in list(app.documents):
         if document == current_document:
             continue

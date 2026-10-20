@@ -4,10 +4,10 @@ Quy trình thiết kế tham số trong Autodesk Fusion, kiểm tra khả năng 
 
 ## Cấu trúc
 
-- [AGENTS.md](AGENTS.md): rule điều phối chung cho người và AI.
+- [CLAUDE.md](CLAUDE.md): quy ước chung cho người và AI.
 - [docs/README.md](docs/README.md): mục lục tài liệu và rule chung.
 - [Box HybridLora](projects/box-hybrid-lora/README.md): hồ sơ hộp LoRa ngoài trời, thiết kế, chuẩn bị in và lịch sử phiên bản.
-- [scripts/fusion/README.md](scripts/fusion/README.md): nơi đặt script Fusion API khi thiết kế được chốt.
+- [scripts/fusion/README.md](scripts/fusion/README.md): cách chạy script Fusion API của từng project.
 - [library/README.md](library/README.md): thông số linh kiện dùng lại, lưu dưới dạng text có cấu trúc.
 
 ## Quy trình

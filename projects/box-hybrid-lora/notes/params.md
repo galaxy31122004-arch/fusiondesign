@@ -1,5 +1,19 @@
 # Box HybridLora — tham số và dữ liệu đầu vào
 
+## Nguồn trong references
+
+Các file dưới đây đã có trước quy ước tên mới nên giữ tên hiện tại để không làm hỏng link từ `library/`. File nguồn được giữ làm bằng chứng sau khi số đo đã chép sang text; không dùng ảnh làm nguồn trực tiếp cho script.
+
+| File | Nguồn/ngày nhận | Revision và dữ liệu đã rút |
+| --- | --- | --- |
+| `references/pcb-layout.png` | Ảnh layout do người dùng gửi, 2026-10-20 | Chưa có revision; PCB 100 × 100 mm theo người dùng |
+| `references/pcb-mounting-detail.png` | Ảnh kích thước do người dùng gửi, 2026-10-20 | Chưa có revision; Ø2 mm, khoảng tâm 94,679 mm và lùi mép 2,436 mm |
+| `references/dc-jack-drawing.png` | Bản vẽ do người dùng gửi, 2026-10-20 | Chưa có mã/revision; số đo dùng lại ở `library/components/dc-jack/component.json` |
+| `references/ipex-sma-yic-drawing.png` | Bản vẽ YIC do người dùng gửi, 2026-10-20 | Rev B; số đo ở `library/components/ipex-sma-yic/component.json` |
+| `references/ipex-sma-rg178-drawing.pdf` | [SOMECONN](https://rfcableassemblies.com/wp-content/uploads/2025/09/ipex-to-sma-female-cable-rg178.pdf), nhận 2026-10-20 | Rev A; số đo ở `library/components/ipex-sma-rg178/component.json` |
+
+Thêm nguồn mới theo [rule vòng đời file](../../../docs/rules/versioning.md): tên có mã/revision hoặc ngày nhận; ghi nguồn, ngày và kích thước đã lấy tại đây, rồi cập nhật `component.json` nếu là linh kiện dùng chung.
+
 ## Bố trí v1.0.0 đang kiểm tra
 
 Đơn vị mm, gốc `(0, 0)` tại góc ngoài dưới trái của thân khi nhìn từ trên. Đây là bố trí nguyên mẫu trong script, **chưa xác minh trên model Fusion hoặc mẫu in**. Rãnh nhỏ chỉ nằm ở **thân hộp**, dành cho dây ron tròn 2 mm thử nghiệm; chưa chọn ron thực tế.

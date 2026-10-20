@@ -2,6 +2,7 @@
 
 import json
 import os
+from datetime import date
 from pathlib import Path
 
 
@@ -24,7 +25,10 @@ def profile_root():
 
 
 PRESETS = profile_root()
-OUTPUT = ROOT / "projects" / "box-hybrid-lora" / "runs" / "resolved_presets"
+OUTPUT = Path(os.environ["FUSIONDESIGN_RUN_DIR"]) if "FUSIONDESIGN_RUN_DIR" in os.environ else (
+    ROOT / "projects" / "box-hybrid-lora" / "runs" /
+    f"{date.today():%Y%m%d}-preset-check" / "presets"
+)
 SELECTED = {
     "machine": "Bambu Lab P2S 0.4 nozzle",
     "process": "0.20mm Standard @BBL P2S",
