@@ -22,6 +22,7 @@
 - **BOX-004/BOX-005, trước in, chưa chốt:** v3 chưa khoét lỗ anten hoặc jack DC. Cần kích thước lắp xuyên vỏ, vị trí theo PCB thật và giải pháp chống mưa trước khi tạo feature cắt.
 - **MAT-001, cập nhật 2026-10-20:** người dùng đã chọn Bambu PETG HF, nozzle 0,4 mm cho bản in thử; màu và loại bàn in thực tế chưa biết. Cảnh báo về plate vẫn mở; chưa có file in được xác nhận.
 - **MAT-002/PRT-008, slice CLI thử, không đạt:** Bambu Studio CLI tạo `plate_1.gcode` cho thân nhưng metadata ghi `filament_type = PLA`, `gcode_flavor = marlin`, `filament_density = 0` và `curr_bed_type = Cool Plate` dù lệnh chọn preset PETG HF/P2S. File này đã chuyển vào `runs/invalid_cli_slice/` (không phát hành, không in). Cần nạp đầy đủ preset kế thừa, xác nhận plate đang lắp, kiểm tra lại G-code và preview trước khi tạo file in mới.
+- **MAT-002, plate thực tế chưa xác minh:** người dùng muốn dùng plate đi kèm P2S Full Combo nhưng chưa biết tên in trên tấm. Không suy tên plate từ tên Combo hay từ preset mặc định; cần xem chữ trên tấm hoặc trong giao diện máy trước khi xuất G-code cuối.
 
 **Cảnh báo sớm:** thiết kế hộp hở đã nêu ở ví dụ ban đầu không đáp ứng mục đích chịu mưa tạt trực tiếp; `box01` phải có nắp và xử lý các lỗ xuyên vỏ. Ron cao su được mô tả nhưng chưa đủ dữ liệu để kết luận kín nước. Đầu nối IPEX ở phía mạch không thay thế việc làm kín tại thành hộp.
 
