@@ -3,7 +3,7 @@
   "type": "script",
   "author": "FusionDesign",
   "description": {
-    "": "Creates a rounded box01 body and lid with four blind PCB mounting holes, then exports F3D and 3MF files."
+    "": "Creates a rounded Box HybridLora body and lid with four blind PCB mounting holes, then exports F3D and 3MF files."
   },
   "supportedOS": "windows|mac",
   "version": "0.1.0",

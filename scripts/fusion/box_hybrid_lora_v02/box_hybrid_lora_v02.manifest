@@ -3,7 +3,7 @@
   "type": "script",
   "author": "FusionDesign",
   "description": {
-    "": "Creates a provisional box01 body and lid with rounded corners, then exports F3D and 3MF files."
+    "": "Creates a provisional Box HybridLora body and lid with rounded corners, then exports F3D and 3MF files."
   },
   "supportedOS": "windows|mac",
   "version": "0.1.0",

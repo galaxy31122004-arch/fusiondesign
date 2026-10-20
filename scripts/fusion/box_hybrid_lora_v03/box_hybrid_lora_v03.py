@@ -10,10 +10,10 @@ import adsk.fusion
 
 SCRIPT_DIR = os.path.dirname(os.path.realpath(__file__))
 PROJECT_ROOT = os.path.abspath(os.path.join(SCRIPT_DIR, '..', '..', '..',
-                                            'projects', 'Box HybridLora'))
-OUTPUT = os.path.join(PROJECT_ROOT, 'design', 'box01_v3.f3d')
-BODY_MESH = os.path.join(PROJECT_ROOT, 'print', 'mesh', 'box01_body_v3.3mf')
-LID_MESH = os.path.join(PROJECT_ROOT, 'print', 'mesh', 'box01_lid_v3.3mf')
+                                            'projects', 'box-hybrid-lora'))
+OUTPUT = os.path.join(PROJECT_ROOT, 'design', 'box-hybrid-lora_v03.f3d')
+BODY_MESH = os.path.join(PROJECT_ROOT, 'print', 'mesh', 'box-hybrid-lora_v03_body.3mf')
+LID_MESH = os.path.join(PROJECT_ROOT, 'print', 'mesh', 'box-hybrid-lora_v03_lid.3mf')
 REPORT = os.path.join(PROJECT_ROOT, 'runs', 'fusion_v3_run.txt')
 
 
@@ -141,7 +141,7 @@ def add_pcb_mounting_bosses(body):
     return positions_mm
 
 
-def close_older_box01_tabs(app, current_document):
+def close_older_project_tabs(app, current_document):
     notes = []
     backup_dir = os.path.join(PROJECT_ROOT, 'runs', 'session_backups')
     for document in list(app.documents):
@@ -154,11 +154,11 @@ def close_older_box01_tabs(app, current_document):
             continue
         root = old_design.rootComponent
         marker = root.attributes.itemByName('FusionDesign', 'project_id')
-        is_box01 = marker and marker.value == 'box01'
-        legacy_box01 = (document.name.startswith('box01_v') and
+        is_project = marker and marker.value in ('box-hybrid-lora', 'box01')
+        legacy_project = (document.name.startswith(('box01_v', 'box-hybrid-lora_v')) and
                         any(item.component.name.startswith('01 Body -')
                             for item in root.occurrences))
-        if not is_box01 and not legacy_box01:
+        if not is_project and not legacy_project:
             continue
         old_name = document.name
         try:
@@ -190,13 +190,13 @@ def run(context):
             raise RuntimeError('Prototype exports already exist; no files were overwritten: '
                                + ', '.join(existing))
         doc = app.documents.add(adsk.core.DocumentTypes.FusionDesignDocumentType)
-        doc.name = 'box01_v3 - PCB mounting prototype'
+        doc.name = 'box-hybrid-lora_v03 - PCB mounting prototype'
         design = adsk.fusion.Design.cast(app.activeProduct)
         if not design:
             raise RuntimeError('Fusion design workspace is unavailable')
         design.designType = adsk.fusion.DesignTypes.ParametricDesignType
         root = design.rootComponent
-        root.attributes.add('FusionDesign', 'project_id', 'box01')
+        root.attributes.add('FusionDesign', 'project_id', 'box-hybrid-lora')
 
         # These are layout assumptions for the first model, not validated fits.
         add_parameter(design, 'box_length', '120 mm', 'Temporary outside length')
@@ -271,12 +271,12 @@ def run(context):
             result.write('PCB boss centers, mm: ' + repr(mounting_positions) + '\n')
             result.write('Four 5 mm bosses with blind 2 mm holes; horizontal PCB hole inset assumed 2.436 mm.\n')
             result.write('Prototype only: no antenna/DC ports, gasket, chosen material, or water rating.\n')
-            for note in close_older_box01_tabs(app, doc):
+            for note in close_older_project_tabs(app, doc):
                 result.write(note + '\n')
-        ui.messageBox('box01 v3 exported to:\n' + OUTPUT +
+        ui.messageBox('Box HybridLora v03 exported to:\n' + OUTPUT +
                       '\n\nPROTOTYPE ONLY: PCB X positions are assumed; antenna/DC ports, gasket, material and water protection are unfinished.')
     except Exception:
         error = traceback.format_exc()
         with open(REPORT, 'w', encoding='utf-8') as result:
             result.write(error)
-        ui.messageBox('box01 v3 script failed:\n' + error)
+        ui.messageBox('Box HybridLora v03 script failed:\n' + error)

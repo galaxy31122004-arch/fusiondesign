@@ -1,5 +1,6 @@
 # Local Fusion execution reports and transient files
 projects/*/runs/
+*.gcode
 result.json
 **/__pycache__/
 *.pyc

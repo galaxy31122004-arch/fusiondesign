@@ -7,7 +7,7 @@
     "recorded_at": "2026-10-20",
     "revision": "A",
     "url": "https://rfcableassemblies.com/wp-content/uploads/2025/09/ipex-to-sma-female-cable-rg178.pdf",
-    "project_archive": "projects/Box HybridLora/references/ipex-sma-rg178-drawing.pdf"
+    "project_archive": "projects/box-hybrid-lora/references/ipex-sma-rg178-drawing.pdf"
   },
   "dimensions": {
     "ipex_front_feature_diameter_mm": {"value": 2.1, "status": "drawing"},

@@ -9,6 +9,6 @@
 
 ## Project
 
-- [Box HybridLora](../projects/Box%20HybridLora/README.md)
+- [Box HybridLora](../projects/box-hybrid-lora/README.md)
 
 Rule chung mô tả phương pháp áp dụng cho mọi model. Kích thước, giả định, cảnh báo và kết quả thử của từng sản phẩm nằm trong `projects/`.

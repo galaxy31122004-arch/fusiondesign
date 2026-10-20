@@ -7,7 +7,7 @@
     "recorded_at": "2026-10-20",
     "drawing_date": "2016-12-13",
     "revision": "B",
-    "project_archive": "projects/Box HybridLora/references/ipex-sma-yic-drawing.png"
+    "project_archive": "projects/box-hybrid-lora/references/ipex-sma-yic-drawing.png"
   },
   "dimensions": {
     "cable_length_mm": {"value": 150, "tolerance_mm": 2, "status": "drawing"},

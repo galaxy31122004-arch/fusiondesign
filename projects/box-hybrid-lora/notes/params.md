@@ -20,7 +20,7 @@ Hộp chứa cụm mạch LoRa dùng ngoài trời, chịu mưa tạt trực ti�
 | Máy in mặc định | Bambu Lab P2S Full Combo | Rule chung |
 | Vật liệu in thử | Bambu PETG HF | Người dùng chọn 2026-10-20; màu chưa chọn |
 | Nozzle in thử | 0,4 mm | Người dùng chọn 2026-10-20 |
-| Loại bàn in đang lắp | Chưa xác định | Người dùng muốn dùng plate đi kèm Combo; chưa xác minh tên plate thực tế |
+| Loại bàn in dự kiến | Bambu Textured PEI Plate | Chữ trên ảnh plate người dùng gửi 2026-10-20; xác nhận tấm đang lắp trước khi in |
 
 ## Tham số Fusion cần chốt
 

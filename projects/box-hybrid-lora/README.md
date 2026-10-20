@@ -6,6 +6,7 @@ Hộp tham số cho mạch LoRa 100 × 100 mm, nguồn adapter 12 V và anten ng
 
 - [Tham số và dữ liệu đầu vào](notes/params.md)
 - [Kiểm tra thiết kế và in](notes/checks.md)
+- [Kết quả kiểm tra theo phiên bản](notes/results.md)
 - [Lịch sử và quay lại](notes/HISTORY.md)
 
 ## File
@@ -14,7 +15,9 @@ Hộp tham số cho mạch LoRa 100 × 100 mm, nguồn adapter 12 V và anten ng
 - `print/mesh/`: 3MF xuất từ Fusion cho từng chi tiết.
 - `print/sliced/`: chỉ chứa file đã slice và kiểm tra đúng máy, vật liệu, nozzle.
 - `references/`: bản vẽ và ảnh nguồn của lần thiết kế này.
-- `notes/`: quyết định, số đo, cảnh báo và lịch sử.
+- `notes/`: quyết định, số đo, checklist, kết quả và lịch sử.
 - `runs/`: log và file thử nghiệm; không đưa vào Git.
 
 Không dùng file trong `runs/invalid_cli_slice/` để in: lần thử CLI đầu tiên đã nạp sai profile kế thừa và xuất G-code có `filament_type = PLA`.
+
+ID project và tên file là `box-hybrid-lora`; **Box HybridLora** là tên hiển thị. Gói slice hiện tại chỉ dùng thử bố cục, chưa dùng làm hộp ngoài trời.

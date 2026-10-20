@@ -9,10 +9,10 @@ import adsk.fusion
 
 SCRIPT_DIR = os.path.dirname(os.path.realpath(__file__))
 PROJECT_ROOT = os.path.abspath(os.path.join(SCRIPT_DIR, '..', '..', '..',
-                                            'projects', 'Box HybridLora'))
-OUTPUT = os.path.join(PROJECT_ROOT, 'design', 'box01_v2.f3d')
-BODY_MESH = os.path.join(PROJECT_ROOT, 'print', 'mesh', 'box01_body_v2.3mf')
-LID_MESH = os.path.join(PROJECT_ROOT, 'print', 'mesh', 'box01_lid_v2.3mf')
+                                            'projects', 'box-hybrid-lora'))
+OUTPUT = os.path.join(PROJECT_ROOT, 'design', 'box-hybrid-lora_v02.f3d')
+BODY_MESH = os.path.join(PROJECT_ROOT, 'print', 'mesh', 'box-hybrid-lora_v02_body.3mf')
+LID_MESH = os.path.join(PROJECT_ROOT, 'print', 'mesh', 'box-hybrid-lora_v02_lid.3mf')
 REPORT = os.path.join(PROJECT_ROOT, 'runs', 'fusion_v2_run.txt')
 
 
@@ -94,7 +94,7 @@ def run(context):
             raise RuntimeError('Prototype exports already exist; no files were overwritten: '
                                + ', '.join(existing))
         doc = app.documents.add(adsk.core.DocumentTypes.FusionDesignDocumentType)
-        doc.name = 'box01_v2 - rounded prototype'
+        doc.name = 'box-hybrid-lora_v02 - rounded prototype'
         design = adsk.fusion.Design.cast(app.activeProduct)
         if not design:
             raise RuntimeError('Fusion design workspace is unavailable')
@@ -168,9 +168,9 @@ def run(context):
             result.write('Created: ' + LID_MESH + '\n')
             result.write('Body 120 x 120 x 65 mm; lid 120 x 120 x 5 mm; wall/bottom 3 mm; corner radius 4 mm.\n')
             result.write('Prototype only: port and PCB hole dimensions pending; no gasket, chosen material, or water rating.\n')
-        ui.messageBox('box01 v2 created and exported to:\n' + OUTPUT)
+        ui.messageBox('Box HybridLora v02 exported to:\n' + OUTPUT)
     except Exception:
         error = traceback.format_exc()
         with open(REPORT, 'w', encoding='utf-8') as result:
             result.write(error)
-        ui.messageBox('box01 v2 script failed:\n' + error)
+        ui.messageBox('Box HybridLora v02 script failed:\n' + error)

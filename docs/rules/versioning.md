@@ -2,9 +2,9 @@
 
 ## Mỗi lần sửa model
 
-1. Tạo mã phiên bản mới `vNN` và đặt tên document Fusion dạng `<project>_vNN - <mô tả>` ngay khi tạo; không để tab `Untitled`.
-2. Xuất F3D và 3MF với tên có mã phiên bản vào thư mục project. Không ghi đè file phiên bản trước. Lưu document trong project Fusion với tên cùng mã phiên bản; xác nhận `isSaved = True` và ghi tên project đã lưu. Nếu dịch vụ Fusion không truy cập được, ghi rõ chỉ có bản local F3D.
-3. Kiểm tra file tồn tại, đơn vị/kích thước mesh và ghi thay đổi, kết quả kiểm tra, cảnh báo còn lại vào `projects/<id>/notes/HISTORY.md` và `notes/checks.md`.
+1. Tạo mã phiên bản mới `vNN` và đặt tên document Fusion dạng `<id>_vNN - <mô tả>` ngay khi tạo; không để tab `Untitled`. ID project dùng chữ thường và dấu gạch nối, không có dấu cách; tên hiển thị được giữ trong README.
+2. Xuất F3D dạng `<id>_vNN.f3d`, mesh dạng `<id>_vNN_<part>.3mf`, và gói slice dạng `<id>_vNN_<part>_<material>.3mf` vào thư mục project. Không ghi đè file phiên bản trước. Lưu document trong project Fusion với tên cùng mã phiên bản; xác nhận `isSaved = True` và ghi tên project đã lưu. Nếu dịch vụ Fusion không truy cập được, ghi rõ chỉ có bản local F3D.
+3. Kiểm tra file tồn tại, đơn vị/kích thước mesh và ghi thay đổi vào `projects/<id>/notes/HISTORY.md`, trạng thái hiện tại vào `notes/checks.md`, bằng chứng theo lần kiểm tra vào `notes/results.md`.
 4. Khi bản mới đã xuất thành công, đóng các tab Fusion cũ **của đúng project** để tiết kiệm tài nguyên. Trước khi đóng một tab cũ có chỉnh sửa chưa được lưu, xuất bản sao phiên làm việc riêng trong `projects/<id>/runs/session_backups/`; nếu sao lưu lỗi, giữ tab mở và báo rõ.
 5. Không tự đóng tab project khác hoặc tab không xác định được nguồn gốc. Nếu lần chạy mới lỗi, giữ tab của bản trước để tiếp tục làm việc.
 

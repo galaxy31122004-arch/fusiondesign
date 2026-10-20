@@ -6,7 +6,7 @@
     "kind": "dimensioned_drawing_supplied_by_user",
     "recorded_at": "2026-10-20",
     "part_number_on_drawing": null,
-    "project_archive": "projects/Box HybridLora/references/dc-jack-drawing.png"
+    "project_archive": "projects/box-hybrid-lora/references/dc-jack-drawing.png"
   },
   "dimensions": {
     "front_width_mm": {"value": 9.0, "status": "drawing"},

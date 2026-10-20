@@ -9,10 +9,10 @@ import adsk.fusion
 
 SCRIPT_DIR = os.path.dirname(os.path.realpath(__file__))
 PROJECT_ROOT = os.path.abspath(os.path.join(SCRIPT_DIR, '..', '..', '..',
-                                            'projects', 'Box HybridLora'))
-OUTPUT = os.path.join(PROJECT_ROOT, 'design', 'box01_prototype.f3d')
-BODY_MESH = os.path.join(PROJECT_ROOT, 'print', 'mesh', 'box01_body_prototype.3mf')
-LID_MESH = os.path.join(PROJECT_ROOT, 'print', 'mesh', 'box01_lid_prototype.3mf')
+                                            'projects', 'box-hybrid-lora'))
+OUTPUT = os.path.join(PROJECT_ROOT, 'design', 'box-hybrid-lora_v01.f3d')
+BODY_MESH = os.path.join(PROJECT_ROOT, 'print', 'mesh', 'box-hybrid-lora_v01_body.3mf')
+LID_MESH = os.path.join(PROJECT_ROOT, 'print', 'mesh', 'box-hybrid-lora_v01_lid.3mf')
 REPORT = os.path.join(PROJECT_ROOT, 'runs', 'fusion_run.txt')
 
 
@@ -72,7 +72,7 @@ def run(context):
             raise RuntimeError('Prototype exports already exist; no files were overwritten: '
                                + ', '.join(existing))
         doc = app.documents.add(adsk.core.DocumentTypes.FusionDesignDocumentType)
-        doc.name = 'box01_v1 - prototype'
+        doc.name = 'box-hybrid-lora_v01 - prototype'
         design = adsk.fusion.Design.cast(app.activeProduct)
         if not design:
             raise RuntimeError('Fusion design workspace is unavailable')
@@ -143,9 +143,9 @@ def run(context):
             result.write('Created: ' + LID_MESH + '\n')
             result.write('Body 120 x 120 x 65 mm; lid 120 x 120 x 5 mm; wall/bottom 3 mm.\n')
             result.write('Prototype only: no PCB mounts, ports, gasket, chosen material, or water rating.\n')
-        ui.messageBox('box01 prototype created and exported to:\n' + OUTPUT)
+        ui.messageBox('Box HybridLora v01 exported to:\n' + OUTPUT)
     except Exception:
         error = traceback.format_exc()
         with open(REPORT, 'w', encoding='utf-8') as result:
             result.write(error)
-        ui.messageBox('box01 script failed:\n' + error)
+        ui.messageBox('Box HybridLora v01 script failed:\n' + error)

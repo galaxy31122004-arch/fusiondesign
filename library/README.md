@@ -12,6 +12,6 @@ Kích thước sản phẩm riêng như PCB 100 × 100 mm, số lỗ, đường 
 | [ipex-sma-yic](components/ipex-sma-yic/component.json) | Cáp I-PEX–SMA Female YIC có O-ring | Kích thước ren, đầu SMA và chiều dài cáp |
 | [ipex-sma-rg178](components/ipex-sma-rg178/component.json) | Cáp IPEX/U.FL–SMA Female SOMECONN RG178 | Kích thước đầu nối được ghi trên bản vẽ |
 
-Quy tắc cập nhật: ghi giá trị, đơn vị, nguồn (tên bản vẽ, mã, revision/ngày nếu có) và trạng thái xác nhận cho từng kích thước. File ảnh/PDF gốc của lần sử dụng **Box HybridLora** được lưu trong `projects/Box HybridLora/references/` để truy vết, không thuộc thư viện dùng chung. Nếu đổi mã linh kiện, tạo mục mới hoặc phiên bản mới; không sửa ngầm thông số của linh kiện cũ.
+Quy tắc cập nhật: ghi giá trị, đơn vị, nguồn (tên bản vẽ, mã, revision/ngày nếu có) và trạng thái xác nhận cho từng kích thước. File ảnh/PDF gốc của lần sử dụng **Box HybridLora** được lưu trong `projects/box-hybrid-lora/references/` để truy vết, không thuộc thư viện dùng chung. Nếu đổi mã linh kiện, tạo mục mới hoặc phiên bản mới; không sửa ngầm thông số của linh kiện cũ.
 
 Quy trình chi tiết để thêm mục mới nằm trong [rule thư viện linh kiện](../docs/rules/component-library.md).
