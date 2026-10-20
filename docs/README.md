@@ -3,8 +3,11 @@
 ## Rule chung
 
 - [Khả năng in](rules/printability.md): kiểm tra trước thiết kế, trong Fusion và trước in.
+- [Nguồn model 3D](rules/model-source.md): chọn tự dựng tham số hoặc nhập model ngoài/AI và kiểm tra lại kích thước chức năng.
 - [Bố trí part trên plate](rules/plate-layout.md): chọn chung hoặc tách plate theo vùng in, brim/support và rủi ro in lại.
+- [Hộp điện tử ngoài trời](rules/outdoor-enclosure.md): đường ron, vít nắp, lỗ xuyên vỏ và thử nước.
 - [Vật liệu](rules/material.md): chọn vật liệu, profile P2S và kiểm tra lại khi thay đổi cấu hình.
+- [Nhiệt độ, layer và infill](rules/process-settings.md): chọn thông số theo vật liệu, plate, nozzle và chức năng chi tiết.
 - [Thư viện linh kiện](rules/component-library.md): cách thêm và ghi số đo linh kiện dạng text.
 - [Phiên bản và quay lại](rules/versioning.md): đặt tên, lưu bản mới, đóng tab cũ và khôi phục F3D.
 

@@ -1,19 +1,19 @@
 # Box HybridLora - checklist
 
-Áp dụng [rule khả năng in](../../../docs/rules/printability.md) và [rule vật liệu](../../../docs/rules/material.md). Bằng chứng theo từng lần kiểm tra nằm trong [results.md](results.md).
+Áp dụng [rule khả năng in](../../../docs/rules/printability.md), [rule vật liệu](../../../docs/rules/material.md) và [rule hộp ngoài trời](../../../docs/rules/outdoor-enclosure.md). Bằng chứng theo từng lần kiểm tra nằm trong [results.md](results.md).
 
 | Rule ID | Kiểm tra | Trạng thái hiện tại | Điều kiện để đóng |
 | --- | --- | --- | --- |
 | BOX-001 | PCB 100 × 100 mm có khoảng hở lắp, không va thành/nắp | Chưa xác minh | Lắp thử PCB và đo khoảng hở linh kiện |
 | BOX-002 | Trụ và lỗ bắt PCB không chạm linh kiện/đường mạch | Chưa xác minh | Xác nhận tọa độ ngang, đầu vít và mặt dưới PCB |
-| BOX-003 | Nắp và đường ghép chống mưa tạt | Chưa xác minh | Chốt ron, kết cấu khóa và thử nước |
-| BOX-004 | Anten xuyên vỏ đúng vị trí và kín nước | Chưa chốt | Chốt đầu SMA, lỗ panel, O-ring và thử lắp |
+| BOX-003 | Nắp và đường ghép chống mưa tạt | Có rãnh/vít nguyên mẫu v04; chưa xác minh | Chốt ron, kiểm tra độ ép và thử nước |
+| BOX-004 | Anten xuyên vỏ đúng vị trí và kín nước | Có lỗ SMA thử v04; chưa xác minh | Đo đầu SMA, lỗ panel, O-ring và thử lắp |
 | BOX-005 | Jack nguồn 12 V xuyên vỏ đúng vị trí và kín nước | Chưa chốt | Chốt đầu cắm, lỗ vỏ và cách làm kín |
 | BOX-006 | Vật liệu và profile P2S phù hợp | Đạt ở mức slice thử | Xác nhận màu, plate/nozzle đang lắp và thử in |
 | BOX-007 | Hướng lắp ngoài trời và đường nước chảy | Chưa chốt | Có tư thế lắp và kiểm tra đọng nước |
 | BOX-008 | Bo góc giữ độ dày thành và khoảng hở | Kiểm tra mesh sơ bộ | Đo thành, nắp, PCB và lỗ sau bo trên mẫu thật |
 
-**Cảnh báo dùng thử:** bản v03 đã slice thành công nhưng chưa có lỗ anten, lỗ nguồn, ron hoặc khóa nắp. Chỉ dùng để thử kích thước và lắp ráp; không đặt mạch ngoài mưa.
+**Cảnh báo dùng thử:** bản v04 có lỗ anten và rãnh ron nhỏ nhưng chưa đo đầu SMA, chưa chọn ron, chưa có lỗ/giải pháp kín cho nguồn DC và chưa slice. Hai file Bambu đã slice vẫn là **v03**, không khớp v04. Không đặt mạch ngoài mưa.
 
 ## Trong Fusion
 

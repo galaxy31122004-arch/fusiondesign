@@ -19,4 +19,4 @@ Hộp tham số cho mạch LoRa 100 × 100 mm, nguồn adapter 12 V và anten ng
 
 Lần slice CLI đầu từng nạp sai profile và xuất G-code có `filament_type = PLA`; file lỗi đã được xóa sau khi ghi bằng chứng tại [results.md](notes/results.md). Chỉ dùng gói trong `print/sliced/` đã qua kiểm tra.
 
-ID project và tên file là `box-hybrid-lora`; **Box HybridLora** là tên hiển thị. Gói slice hiện tại chỉ dùng thử bố cục, chưa dùng làm hộp ngoài trời.
+ID project và tên file là `box-hybrid-lora`; **Box HybridLora** là tên hiển thị. F3D hiện tại là v04; hai gói slice hiện tại là v03 và **không khớp v04**. Gói slice chỉ dùng thử bố cục cũ, chưa dùng làm hộp ngoài trời.

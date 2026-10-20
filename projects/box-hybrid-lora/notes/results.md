@@ -1,5 +1,12 @@
 # Box HybridLora - kết quả kiểm tra
 
+## V04 - bố trí Fusion, 2026-10-20
+
+- **Nguồn model:** script tham số `scripts/fusion/box_hybrid_lora/box_hybrid_lora.py`; F3D local `design/box-hybrid-lora_v04.f3d`. Script khóa gốc sketch ngoài tại `(0, 0)` và tâm các lỗ/tai, rồi từ chối xuất nếu footprint thân/nắp lệch hoặc tai bắt không nối thành một khối.
+- **Hình học đã đo từ hai mesh 3MF Fusion trong `runs/mesh/`:** đơn vị `millimeter`; mỗi file có một đối tượng. Thân có giới hạn X = -11,466 đến 157,466 mm (gồm tai), Y = 0 đến 146 mm, Z = 0 đến 68 mm. Nắp X/Y = 0 đến 146 mm, Z = 0 đến 5 mm. Mesh là file kiểm tra tạm, chưa slice.
+- **Bố trí dự kiến:** bốn tâm vít nắp `(10,5; 10,5)`, `(135,5; 10,5)`, `(10,5; 135,5)`, `(135,5; 135,5)` mm; rãnh dây ron nhỏ ở vành thân, nằm phía trong lỗ vít; lỗ SMA Ø6,6 mm thử ở thành phải, Y = 122, Z = 55 mm. Các tâm và đường kính là tham số/script, **chưa đo lại trên mẫu vật lý**.
+- **Còn mở:** chưa có dây ron thực tế, chưa thử độ ép/kín nước, chưa thử lắp đầu SMA, chưa có phương án kín nước cho nguồn DC cắm trực tiếp. V04 chưa slice trong Bambu Studio, chưa phải file để in hoặc vỏ dùng ngoài trời.
+
 Mỗi lần đánh giá rule tạo bản ghi mới. [checks.md](checks.md) chỉ giữ checklist và trạng thái hiện tại. Slice thành công không xác nhận khả năng chống nước hoặc lắp PCB thực tế.
 
 ## Bản dựng v01, 2026-10-20

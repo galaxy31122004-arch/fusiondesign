@@ -11,6 +11,7 @@ Xây quy trình thống nhất từ thiết kế tham số trong Autodesk Fusion
 - Khi người dùng ghi chú hoặc sửa một quy tắc áp dụng cho nhiều project, cập nhật ngay file rule chung tương ứng trong `docs/rules/` và kiểm tra các project bị ảnh hưởng. Nếu thay đổi chỉ thuộc một project, chỉ cập nhật `projects/<tên-project>/notes/` và model/script liên quan; không thêm vào rule chung.
 - Thông số loại linh kiện cơ bản có thể tái dùng nằm dưới dạng text trong [library/](library/README.md); lần sau không cần đọc ảnh để lấy lại thông số đã ghi. Kích thước, số lỗ và vị trí đặt riêng của PCB hoặc vỏ nằm trong project; không sao chép số đo giữa hai mã linh kiện khác nhau.
 - Khi thêm hoặc cập nhật linh kiện, áp dụng [docs/rules/component-library.md](docs/rules/component-library.md) và ghi nguồn cùng trạng thái xác nhận cho từng kích thước.
+- Khi chọn giữa tự dựng model và nhập model ngoài/AI, áp dụng [docs/rules/model-source.md](docs/rules/model-source.md); các kích thước chức năng phải đo lại và có nguồn tham số kiểm soát được.
 - Mỗi lần sửa model phải áp dụng [docs/rules/versioning.md](docs/rules/versioning.md): lưu phiên bản trong Fusion, chỉ giữ bản F3D mới nhất và gói Bambu đã kiểm tra trong thư mục làm việc; Git và ghi chú giữ lịch sử. Đóng tab Fusion cũ của đúng project sau khi bản mới an toàn, sao lưu tab có chỉnh sửa chưa lưu trước khi đóng.
 - Nếu yêu cầu mới thay đổi công dụng hoặc môi trường sử dụng, cập nhật thiết kế và checklist trước khi dựng model; không giữ giả định cũ đã mâu thuẫn.
 
@@ -25,6 +26,8 @@ Xây quy trình thống nhất từ thiết kế tham số trong Autodesk Fusion
 
 - Đọc [docs/rules/printability.md](docs/rules/printability.md) trước khi lập kế hoạch tạo hoặc sửa bất kỳ model nào. File này quy định kiểm tra từ lúc nhận yêu cầu, trong lúc thiết kế và trước khi chuyển sang Bambu Studio.
 - Đọc [docs/rules/material.md](docs/rules/material.md) khi chọn vật liệu hoặc profile in. Dùng đúng cấu hình P2S, nozzle và vật liệu của project; không chép cứng thông số của một preset làm mặc định cho mọi cuộn nhựa.
+- Trước khi slice, áp dụng [docs/rules/process-settings.md](docs/rules/process-settings.md) để kiểm tra nhiệt độ, layer height theo nozzle, wall/top/bottom và infill; ghi mọi thay đổi so với preset vào project.
+- Với hộp chứa điện tử dùng ngoài trời, áp dụng [docs/rules/outdoor-enclosure.md](docs/rules/outdoor-enclosure.md) cho đường ron, vít nắp, mọi lỗ xuyên vỏ và phép thử nước trước khi kết luận kín nước.
 - Khi có nhiều part, đọc [docs/rules/plate-layout.md](docs/rules/plate-layout.md) trước khi quyết định xếp chung hay tách plate; ghi lý do và bằng chứng trong project.
 - Mỗi project phải tạo một bản ghi kiểm tra theo các giai đoạn trong file đó. Không bỏ qua cảnh báo chỉ vì model tạo được trong Fusion hoặc slice thành công.
 - Chỉ áp dụng ngưỡng cụ thể khi nguồn và điều kiện áp dụng đã được ghi rõ. Nếu chưa có căn cứ, giữ trạng thái `Chưa xác minh` và đề xuất phép kiểm tra hoặc mẫu in thử.

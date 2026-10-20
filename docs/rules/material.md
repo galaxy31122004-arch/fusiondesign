@@ -16,6 +16,8 @@ Tài liệu web chính thức chưa truy cập được trong lần kiểm tra n
 6. Chọn process profile phù hợp với nozzle và mục tiêu chất lượng. Kiểm tra layer height, wall, infill, support, cooling, nhiệt độ, tốc độ/flow, bàn in và các yêu cầu xử lý vật liệu do profile hoặc nguồn đã xác minh nêu ra.
 7. Khi đổi vật liệu, màu có profile riêng, nozzle, bàn in hoặc process profile, chạy lại các kiểm tra thiết kế và preview slice bị ảnh hưởng.
 
+Nhiệt nozzle/plate, layer height theo nozzle và infill được quyết định theo [process-settings.md](process-settings.md); bảng vật liệu ở đây chỉ nêu rủi ro cần xét.
+
 Trước khi xuất file in, xác nhận loại bàn in **đang lắp thực tế** rồi chọn đúng mục trong Bambu Studio. Nếu chưa biết loại bàn, chỉ được tạo mesh để xem hoặc thử slice để chẩn đoán; chưa phát hành G-code để in. Với công cụ CLI, kiểm tra G-code đã giải quyết đầy đủ profile kế thừa và không rơi về giá trị mặc định của vật liệu/máy khác.
 
 ## Nhóm rủi ro theo vật liệu để kiểm tra sớm
