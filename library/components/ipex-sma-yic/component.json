@@ -1,0 +1,23 @@
+{
+  "id": "ipex-sma-yic",
+  "name": "YIC I-PEX to SMA Female cable with O-ring",
+  "part_number": "IPEX-1.13B-150-SMAF",
+  "source": {
+    "kind": "YIC_dimensioned_drawing_supplied_by_user",
+    "recorded_at": "2026-10-20",
+    "drawing_date": "2016-12-13",
+    "revision": "B",
+    "project_archive": "projects/Box HybridLora/references/ipex-sma-yic-drawing.png"
+  },
+  "dimensions": {
+    "cable_length_mm": {"value": 150, "tolerance_mm": 2, "status": "drawing"},
+    "thread": {"value": "1/4-36 UNS", "status": "drawing"},
+    "hex_width_mm": {"value": 11.0, "status": "drawing"},
+    "threaded_end_axial_length_mm": {"value": 11.5, "tolerance_mm": 0.1, "status": "drawing"},
+    "nut_thickness_mm": {"value": 1.8, "status": "drawing"},
+    "sma_connector_has_o_ring": {"value": true, "status": "drawing"},
+    "panel_hole_diameter_mm": {"value": null, "status": "pending"},
+    "o_ring_outer_diameter_mm": {"value": null, "status": "pending"}
+  },
+  "notes": "SMA Female bulkhead cable with I-PEX MHF plug and black O-ring. The 1/4-36 UNS thread is a connector specification; a panel cutout diameter and O-ring compression are not supplied. Confirm this exact part before using its dimensions."
+}

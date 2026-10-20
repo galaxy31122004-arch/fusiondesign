@@ -1,0 +1,9 @@
+# Local Fusion execution reports and transient files
+projects/*/runs/
+**/__pycache__/
+*.pyc
+
+# Editor and OS metadata
+.vscode/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,21 @@
+{
+  "id": "dc-jack",
+  "name": "PCB-mounted DC barrel jack",
+  "part_number": null,
+  "source": {
+    "kind": "dimensioned_drawing_supplied_by_user",
+    "recorded_at": "2026-10-20",
+    "part_number_on_drawing": null,
+    "project_archive": "projects/Box HybridLora/references/dc-jack-drawing.png"
+  },
+  "dimensions": {
+    "front_width_mm": {"value": 9.0, "status": "drawing"},
+    "front_height_mm": {"value": 11.0, "status": "drawing"},
+    "front_round_feature_diameter_mm": {"value": 6.4, "status": "drawing"},
+    "body_depth_mm": {"value": 14.2, "status": "drawing"},
+    "panel_cutout_width_mm": {"value": null, "status": "pending"},
+    "panel_cutout_height_mm": {"value": null, "status": "pending"},
+    "plug_access_clearance_mm": {"value": null, "status": "pending"}
+  },
+  "notes": "PCB-mounted barrel jack, not a panel-mount connector. The 6.4 mm drawing callout describes the circular front feature, not an enclosure cutout. The drawing does not specify a sealing boot, plug clearance or weather rating."
+}

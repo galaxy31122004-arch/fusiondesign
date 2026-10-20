@@ -1,0 +1,21 @@
+{
+  "id": "ipex-sma-rg178",
+  "name": "SOMECONN IPEX/U.FL to SMA Female RG178 cable",
+  "part_number": "SC-RG178-IPEX-SMAF",
+  "source": {
+    "kind": "SOMECONN_dimensioned_drawing",
+    "recorded_at": "2026-10-20",
+    "revision": "A",
+    "url": "https://rfcableassemblies.com/wp-content/uploads/2025/09/ipex-to-sma-female-cable-rg178.pdf",
+    "project_archive": "projects/Box HybridLora/references/ipex-sma-rg178-drawing.pdf"
+  },
+  "dimensions": {
+    "ipex_front_feature_diameter_mm": {"value": 2.1, "status": "drawing"},
+    "ipex_side_feature_diameter_mm": {"value": 3.0, "status": "drawing"},
+    "sma_end_axial_length_mm": {"value": 11, "status": "drawing"},
+    "panel_hole_diameter_mm": {"value": null, "status": "pending"},
+    "o_ring_outer_diameter_mm": {"value": null, "status": "pending"}
+  },
+  "specifications": {"cable_type": "RG178", "characteristic_impedance_ohm": 50, "cable_length_mm": null},
+  "notes": "IPEX/U.FL to SMA Female cable. Cable length is not fixed by this drawing. No panel cutout or O-ring dimensions are specified. Do not copy YIC dimensions into this part."
+}
