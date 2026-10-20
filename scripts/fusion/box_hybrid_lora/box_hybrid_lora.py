@@ -12,8 +12,8 @@ SCRIPT_DIR = os.path.dirname(os.path.realpath(__file__))
 PROJECT_ROOT = os.path.abspath(os.path.join(SCRIPT_DIR, '..', '..', '..',
                                             'projects', 'box-hybrid-lora'))
 OUTPUT = os.path.join(PROJECT_ROOT, 'design', 'box-hybrid-lora_v03.f3d')
-BODY_MESH = os.path.join(PROJECT_ROOT, 'print', 'mesh', 'box-hybrid-lora_v03_body.3mf')
-LID_MESH = os.path.join(PROJECT_ROOT, 'print', 'mesh', 'box-hybrid-lora_v03_lid.3mf')
+BODY_MESH = os.path.join(PROJECT_ROOT, 'runs', 'mesh', 'box-hybrid-lora_v03_body.3mf')
+LID_MESH = os.path.join(PROJECT_ROOT, 'runs', 'mesh', 'box-hybrid-lora_v03_lid.3mf')
 REPORT = os.path.join(PROJECT_ROOT, 'runs', 'fusion_v3_run.txt')
 
 
@@ -184,11 +184,13 @@ def close_older_project_tabs(app, current_document):
 def run(context):
     app = adsk.core.Application.get()
     ui = app.userInterface
+    os.makedirs(os.path.dirname(REPORT), exist_ok=True)
     try:
         existing = [path for path in (OUTPUT, BODY_MESH, LID_MESH) if os.path.exists(path)]
         if existing:
             raise RuntimeError('Prototype exports already exist; no files were overwritten: '
                                + ', '.join(existing))
+        os.makedirs(os.path.dirname(BODY_MESH), exist_ok=True)
         doc = app.documents.add(adsk.core.DocumentTypes.FusionDesignDocumentType)
         doc.name = 'box-hybrid-lora_v03 - PCB mounting prototype'
         design = adsk.fusion.Design.cast(app.activeProduct)

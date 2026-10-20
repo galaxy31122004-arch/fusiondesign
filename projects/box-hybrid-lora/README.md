@@ -11,13 +11,12 @@ Hộp tham số cho mạch LoRa 100 × 100 mm, nguồn adapter 12 V và anten ng
 
 ## File
 
-- `design/`: các bản Fusion F3D có tham số.
-- `print/mesh/`: 3MF xuất từ Fusion cho từng chi tiết.
+- `design/`: một bản Fusion F3D mới nhất để dự phòng; model chính đã lưu trên Fusion.
 - `print/sliced/`: chỉ chứa file đã slice và kiểm tra đúng máy, vật liệu, nozzle.
 - `references/`: bản vẽ và ảnh nguồn của lần thiết kế này.
 - `notes/`: quyết định, số đo, checklist, kết quả và lịch sử.
-- `runs/`: log và file thử nghiệm; không đưa vào Git.
+- `runs/`: mesh, log và file thử tạm thời; không đưa vào Git và dọn sau khi ghi kết quả.
 
-Không dùng file trong `runs/invalid_cli_slice/` để in: lần thử CLI đầu tiên đã nạp sai profile kế thừa và xuất G-code có `filament_type = PLA`.
+Lần slice CLI đầu từng nạp sai profile và xuất G-code có `filament_type = PLA`; file lỗi đã được xóa sau khi ghi bằng chứng tại [results.md](notes/results.md). Chỉ dùng gói trong `print/sliced/` đã qua kiểm tra.
 
 ID project và tên file là `box-hybrid-lora`; **Box HybridLora** là tên hiển thị. Gói slice hiện tại chỉ dùng thử bố cục, chưa dùng làm hộp ngoài trời.

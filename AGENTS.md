@@ -11,7 +11,7 @@ Xây quy trình thống nhất từ thiết kế tham số trong Autodesk Fusion
 - Khi người dùng ghi chú hoặc sửa một quy tắc áp dụng cho nhiều project, cập nhật ngay file rule chung tương ứng trong `docs/rules/` và kiểm tra các project bị ảnh hưởng. Nếu thay đổi chỉ thuộc một project, chỉ cập nhật `projects/<tên-project>/notes/` và model/script liên quan; không thêm vào rule chung.
 - Thông số loại linh kiện cơ bản có thể tái dùng nằm dưới dạng text trong [library/](library/README.md); lần sau không cần đọc ảnh để lấy lại thông số đã ghi. Kích thước, số lỗ và vị trí đặt riêng của PCB hoặc vỏ nằm trong project; không sao chép số đo giữa hai mã linh kiện khác nhau.
 - Khi thêm hoặc cập nhật linh kiện, áp dụng [docs/rules/component-library.md](docs/rules/component-library.md) và ghi nguồn cùng trạng thái xác nhận cho từng kích thước.
-- Mỗi lần sửa model phải áp dụng [docs/rules/versioning.md](docs/rules/versioning.md): phiên bản mới có F3D/3MF riêng, ghi lịch sử trong `notes/HISTORY.md` và đóng tab Fusion cũ của đúng project sau khi bản mới đã xuất thành công. Sao lưu tab cũ có chỉnh sửa chưa lưu trước khi đóng.
+- Mỗi lần sửa model phải áp dụng [docs/rules/versioning.md](docs/rules/versioning.md): lưu phiên bản trong Fusion, chỉ giữ bản F3D mới nhất và gói Bambu đã kiểm tra trong thư mục làm việc; Git và ghi chú giữ lịch sử. Đóng tab Fusion cũ của đúng project sau khi bản mới an toàn, sao lưu tab có chỉnh sửa chưa lưu trước khi đóng.
 - Nếu yêu cầu mới thay đổi công dụng hoặc môi trường sử dụng, cập nhật thiết kế và checklist trước khi dựng model; không giữ giả định cũ đã mâu thuẫn.
 
 ## Ranh giới trách nhiệm

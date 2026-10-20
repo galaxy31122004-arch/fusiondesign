@@ -1,18 +1,18 @@
-# Rule phiên bản và quay lại bản cũ
+# Rule phiên bản và dọn file trung gian
+
+ID project dùng chữ thường và dấu gạch nối, không có dấu cách; tên hiển thị nằm trong README. Fusion là nguồn model tham số. Git lưu thay đổi của script, ghi chú và những file phát hành đã commit; không tạo một tập file F3D/mesh vĩnh viễn cho mỗi lần sửa.
 
 ## Mỗi lần sửa model
 
-1. Tạo mã phiên bản mới `vNN` và đặt tên document Fusion dạng `<id>_vNN - <mô tả>` ngay khi tạo; không để tab `Untitled`. ID project dùng chữ thường và dấu gạch nối, không có dấu cách; tên hiển thị được giữ trong README.
-2. Xuất F3D dạng `<id>_vNN.f3d`, mesh dạng `<id>_vNN_<part>.3mf`, và gói slice dạng `<id>_vNN_<part>_<material>.3mf` vào thư mục project. Không ghi đè file phiên bản trước. Lưu document trong project Fusion với tên cùng mã phiên bản; xác nhận `isSaved = True` và ghi tên project đã lưu. Nếu dịch vụ Fusion không truy cập được, ghi rõ chỉ có bản local F3D.
-3. Kiểm tra file tồn tại, đơn vị/kích thước mesh và ghi thay đổi vào `projects/<id>/notes/HISTORY.md`, trạng thái hiện tại vào `notes/checks.md`, bằng chứng theo lần kiểm tra vào `notes/results.md`.
-4. Khi bản mới đã xuất thành công, đóng các tab Fusion cũ **của đúng project** để tiết kiệm tài nguyên. Trước khi đóng một tab cũ có chỉnh sửa chưa được lưu, xuất bản sao phiên làm việc riêng trong `projects/<id>/runs/session_backups/`; nếu sao lưu lỗi, giữ tab mở và báo rõ.
-5. Không tự đóng tab project khác hoặc tab không xác định được nguồn gốc. Nếu lần chạy mới lỗi, giữ tab của bản trước để tiếp tục làm việc.
+1. Lưu document trong Fusion sau khi sửa; kiểm tra `isSaved = True` và ghi tên project/phiên bản Fusion vào `notes/HISTORY.md`. Timeline cho phép kiểm tra các feature; bản lưu Fusion và Git là hai cách khôi phục khác nhau.
+2. Giữ **một bản F3D mới nhất** ở `design/` làm bản dự phòng mang đi được. Khi có bản mới, xác nhận đã lưu trên Fusion và F3D mới mở được trước khi xóa bản F3D cũ khỏi thư mục làm việc. Bản cũ đã commit vẫn còn trong Git history. Nếu Fusion không lưu được, giữ F3D dự phòng trước khi dọn.
+3. Xuất mesh trung gian vào `runs/mesh/` (bị Git bỏ qua), kiểm tra kích thước/đơn vị rồi đưa sang Bambu Studio. Sau khi gói Bambu đã slice và kiểm tra xong, xóa mesh trung gian; xuất lại từ Fusion khi cần.
+4. Giữ gói Bambu 3MF đã kiểm tra ở `print/sliced/` cho từng part/plate cần in, với tên `<id>_vNN_<part>_<material>.3mf`. Gói này chứa cấu hình và G-code; không dựa vào lịch sử Undo của ứng dụng để tìm lại file in sau này. Khi thay model/profile, tạo gói mới, xác minh trước rồi mới xóa gói cũ khỏi thư mục làm việc.
+5. Ghi thay đổi vào `notes/HISTORY.md`, trạng thái hiện tại vào `notes/checks.md`, số đo/kết quả vào `notes/results.md`. Sau khi đã ghi kết quả, dọn log và file thử trong `runs/`; giữ file lỗi lâu hơn chỉ khi đang cần chẩn đoán.
+6. Sau khi bản mới đã lưu và xuất an toàn, đóng tab Fusion cũ **của đúng project**. Tab có chỉnh sửa chưa lưu phải được lưu hoặc sao lưu vào `runs/session_backups/` trước khi đóng. Không đóng tab project khác hoặc tab không xác định được nguồn gốc.
 
-## Quay lại phiên bản trước
+## Quay lại
 
-1. Đọc `projects/<id>/notes/HISTORY.md` để chọn mã phiên bản và trạng thái phù hợp.
-2. Mở F3D tương ứng trong Fusion; kiểm tra component và tham số trước khi sửa.
-3. Tạo phiên bản **mới** từ bản cũ, ví dụ `v04` khôi phục hình học `v02`; ghi rõ nguồn khôi phục trong lịch sử. Không xóa hoặc ghi đè `v02`, `v03`.
-4. Xuất lại 3MF, kiểm tra bằng rule chung và project. Kết quả slice/in của phiên bản sau không tự áp dụng cho bản khôi phục.
-
-F3D là bản thiết kế có tham số dùng để quay lại; 3MF là mesh để kiểm tra/slice, không thay cho lịch sử model tham số.
+1. Xem `notes/HISTORY.md` để tìm phiên bản và kết quả kiểm tra tương ứng.
+2. Trong Fusion, mở phiên bản đã lưu hoặc quay tới feature cần sửa trong timeline. Với bản trước chỉ lưu local, lấy F3D từ Git history rồi mở trong Fusion; không coi Undo/timeline là bản sao lưu của toàn bộ quá trình in.
+3. Lưu thay đổi được khôi phục thành phiên bản mới trong Fusion, xuất F3D dự phòng và slice lại. G-code và kết quả thử của phiên bản sau không tự áp dụng cho bản khôi phục.
