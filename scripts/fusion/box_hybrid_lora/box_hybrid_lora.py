@@ -1,4 +1,4 @@
-"""Create the Box HybridLora v04 enclosure prototype."""
+"""Create the Box HybridLora v1.0.0 enclosure prototype."""
 
 import os
 import traceback
@@ -11,10 +11,10 @@ import adsk.fusion
 SCRIPT_DIR = os.path.dirname(os.path.realpath(__file__))
 PROJECT_ROOT = os.path.abspath(os.path.join(SCRIPT_DIR, '..', '..', '..',
                                             'projects', 'box-hybrid-lora'))
-OUTPUT = os.path.join(PROJECT_ROOT, 'design', 'box-hybrid-lora_v04.f3d')
-BODY_MESH = os.path.join(PROJECT_ROOT, 'runs', 'mesh', 'box-hybrid-lora_v04_body.3mf')
-LID_MESH = os.path.join(PROJECT_ROOT, 'runs', 'mesh', 'box-hybrid-lora_v04_lid.3mf')
-REPORT = os.path.join(PROJECT_ROOT, 'runs', 'fusion_v04_run.txt')
+OUTPUT = os.path.join(PROJECT_ROOT, 'design', 'box-hybrid-lora_v1.0.0.f3d')
+BODY_MESH = os.path.join(PROJECT_ROOT, 'runs', 'mesh', 'box-hybrid-lora_v1.0.0_body.3mf')
+LID_MESH = os.path.join(PROJECT_ROOT, 'runs', 'mesh', 'box-hybrid-lora_v1.0.0_lid.3mf')
+REPORT = os.path.join(PROJECT_ROOT, 'runs', 'fusion_v1.0.0_run.txt')
 
 
 def rectangle(sketch, length_expression, width_expression):
@@ -390,7 +390,7 @@ def run(context):
                                + ', '.join(existing))
         os.makedirs(os.path.dirname(BODY_MESH), exist_ok=True)
         doc = app.documents.add(adsk.core.DocumentTypes.FusionDesignDocumentType)
-        doc.name = 'box-hybrid-lora_v04 - antenna and seal prototype'
+        doc.name = 'box-hybrid-lora_v1.0.0 - antenna and seal prototype'
         design = adsk.fusion.Design.cast(app.activeProduct)
         if not design:
             raise RuntimeError('Fusion design workspace is unavailable')
@@ -502,10 +502,10 @@ def run(context):
             result.write('Prototype only: gasket/SMA and PCB fit unverified; DC entry not designed; no water rating.\n')
             for note in close_older_project_tabs(app, doc):
                 result.write(note + '\n')
-        ui.messageBox('Box HybridLora v04 exported to:\n' + OUTPUT +
+        ui.messageBox('Box HybridLora v1.0.0 exported to:\n' + OUTPUT +
                       '\n\nPROTOTYPE ONLY: gasket and SMA openings need a physical fit test; DC entry and water protection are unfinished.')
     except Exception:
         error = traceback.format_exc()
         with open(REPORT, 'w', encoding='utf-8') as result:
             result.write(error)
-        ui.messageBox('Box HybridLora v04 script failed:\n' + error)
+        ui.messageBox('Box HybridLora v1.0.0 script failed:\n' + error)

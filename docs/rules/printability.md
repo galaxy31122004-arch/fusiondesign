@@ -42,6 +42,8 @@ Vật liệu cần được chọn trước khi chốt các rule phụ thuộc v
 
 ### 3. Trước khi in
 
+- Nếu có MeshRight, chạy kiểm tra **chỉ đọc** trên mesh vừa xuất để đo đơn vị/kích thước, số khối và lỗi topology; lưu báo cáo theo project. Kết quả mesh kín không đóng cảnh báo support, brim, lắp ghép, vật liệu hoặc chống nước. Adapter nằm tại `scripts/printing/check_mesh.py` ([MeshRight CLI](https://github.com/Huzy85/MeshRight/blob/main/src/meshright/cli.py), đọc 2026-10-20; RSCH-20261020-0005).
+
 - Sau khi xuất, xác nhận đơn vị, kích thước, số part và hướng đặt trong Bambu Studio khớp model Fusion.
 - Dùng preview sau khi slice để kiểm tra đường chạy, support, lớp đầu, thành mỏng, khoảng trống và các vùng có nguy cơ. Đánh dấu những mục không thể kết luận từ preview.
 - Nếu slice bằng CLI hoặc công cụ tự động, đọc lại metadata/G-code đầu ra: đúng model máy, nozzle, loại vật liệu, loại bàn in, nhiệt độ và lệnh khởi động máy. Tên preset ở lệnh chạy không đủ chứng minh profile kế thừa đã được nạp; file sai một mục thiết yếu phải cách ly, không đưa vào thư mục file in.

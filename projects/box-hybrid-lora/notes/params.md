@@ -1,6 +1,6 @@
 # Box HybridLora — tham số và dữ liệu đầu vào
 
-## Bố trí v04 đang kiểm tra
+## Bố trí v1.0.0 đang kiểm tra
 
 Đơn vị mm, gốc `(0, 0)` tại góc ngoài dưới trái của thân khi nhìn từ trên. Đây là bố trí nguyên mẫu trong script, **chưa xác minh trên model Fusion hoặc mẫu in**. Rãnh nhỏ chỉ nằm ở **thân hộp**, dành cho dây ron tròn 2 mm thử nghiệm; chưa chọn ron thực tế.
 
@@ -42,7 +42,7 @@ Hộp chứa cụm mạch LoRa dùng ngoài trời, chịu mưa tạt trực ti�
 
 Tất cả tham số dùng **mm**. Kích thước PCB 100 × 100 mm chưa bao gồm khoảng hở lắp ráp, thành, đường ron và không gian cho đầu nối. Các giá trị trong bản sơ bộ chỉ để dựng bố cục, chưa phải kích thước được chốt.
 
-Bản v04 được tạo tham số trực tiếp trong Fusion vì lỗ, trụ, nắp và đường ron cần kích thước chức năng. Kích thước v04 vẫn là bố trí thử, chưa duyệt sản xuất. Các giá trị v03 nằm ở mục lịch sử bên dưới.
+Bản v1.0.0 được tạo tham số trực tiếp trong Fusion vì lỗ, trụ, nắp và đường ron cần kích thước chức năng. Kích thước vẫn là bố trí thử, chưa duyệt sản xuất. Các giá trị v03 nằm ở mục lịch sử bên dưới.
 
 | Tên tham số | Ý nghĩa | Trạng thái |
 | --- | --- | --- |

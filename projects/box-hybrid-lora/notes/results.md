@@ -1,11 +1,20 @@
 # Box HybridLora - kết quả kiểm tra
 
-## V04 - bố trí Fusion, 2026-10-20
+## V1.0.0 (tên làm việc v04) - bố trí Fusion, 2026-10-20
 
-- **Nguồn model:** script tham số `scripts/fusion/box_hybrid_lora/box_hybrid_lora.py`; F3D local `design/box-hybrid-lora_v04.f3d`. Script khóa gốc sketch ngoài tại `(0, 0)` và tâm các lỗ/tai, rồi từ chối xuất nếu footprint thân/nắp lệch hoặc tai bắt không nối thành một khối.
+- **Nguồn model:** script tham số `scripts/fusion/box_hybrid_lora/box_hybrid_lora.py`; F3D local `design/box-hybrid-lora_v1.0.0.f3d`. Script khóa gốc sketch ngoài tại `(0, 0)` và tâm các lỗ/tai, rồi từ chối xuất nếu footprint thân/nắp lệch hoặc tai bắt không nối thành một khối.
 - **Hình học đã đo từ hai mesh 3MF Fusion trong `runs/mesh/`:** đơn vị `millimeter`; mỗi file có một đối tượng. Thân có giới hạn X = -11,466 đến 157,466 mm (gồm tai), Y = 0 đến 146 mm, Z = 0 đến 68 mm. Nắp X/Y = 0 đến 146 mm, Z = 0 đến 5 mm. Mesh là file kiểm tra tạm, chưa slice.
 - **Bố trí dự kiến:** bốn tâm vít nắp `(10,5; 10,5)`, `(135,5; 10,5)`, `(10,5; 135,5)`, `(135,5; 135,5)` mm; rãnh dây ron nhỏ ở vành thân, nằm phía trong lỗ vít; lỗ SMA Ø6,6 mm thử ở thành phải, Y = 122, Z = 55 mm. Các tâm và đường kính là tham số/script, **chưa đo lại trên mẫu vật lý**.
-- **Còn mở:** chưa có dây ron thực tế, chưa thử độ ép/kín nước, chưa thử lắp đầu SMA, chưa có phương án kín nước cho nguồn DC cắm trực tiếp. V04 chưa slice trong Bambu Studio, chưa phải file để in hoặc vỏ dùng ngoài trời.
+- **Còn mở:** chưa có dây ron thực tế, chưa thử độ ép/kín nước, chưa thử lắp đầu SMA, chưa có phương án kín nước cho nguồn DC cắm trực tiếp. Chưa có gói Bambu mới đã xác minh cho v1.0.0, chưa phải vỏ dùng ngoài trời.
+
+## V1.0.0 - kiểm tra mesh và slice thử, 2026-10-20
+
+- **MeshRight 0.2.0, chỉ kiểm tra hình học:** adapter `scripts/printing/check_mesh.py` đọc hai mesh xuất từ Fusion. Thân: 3.296 tam giác, một khối kín, bbox 168,932 × 146 × 68 mm (gồm tai). Nắp: 2.084 tam giác, một khối kín, 146 × 146 × 5 mm. Không có issue topology. Điểm `100/100` và khối lượng PLA đặc do MeshRight tính **không dùng** để kết luận khả năng in P2S; support/vật liệu/độ kín vẫn kiểm tra riêng. Báo cáo JSON tạm ở `runs/mesh_check_v1.0.0.json` ([MeshRight CLI](https://github.com/Huzy85/MeshRight/blob/main/src/meshright/cli.py), đọc 2026-10-20; RSCH-20261020-0005).
+- **Bambu Studio 02.08.02.61, P2S 0,4 mm, PETG HF, Textured PEI:** G-code thử ghi lớp 0,20 mm, nozzle 230°C lớp đầu/245°C sau đó, plate 70°C, 2 vòng thành, infill 15%, `auto_brim` với bề rộng profile 5 mm và khe 0,1 mm. Đây là thông số hiệu lực từ lần slice CLI trên máy, chưa xác nhận cuộn/màu hoặc plate đang lắp vật lý.
+- **Thân không support:** slicer tính 181,6 g, khoảng 4 giờ 18 phút và báo `floating cantilever` ở vành trong; không chọn phương án này để in thử.
+- **Thân bật `normal(auto)` support, cho phép mọc từ mặt trong đáy:** warning rỗng; khoảng 267,5 g và 6 giờ 01 phút. Tăng 85,9 g và khoảng 1 giờ 43 phút so với không support. Cần xem preview vùng support, kiểm tra có tháo được khỏi khoang và có chạm bề mặt ron hay không; chưa in thử.
+- **Nắp không support:** slice thành công, warning rỗng; khoảng 58,7 g và 1 giờ 13 phút. Chưa xem từng lớp trong GUI.
+- **Đóng gói:** CLI xuất `plate_1.gcode` nhưng bước `--export-3mf` trả `-13` (`Failed exporting 3mf files`) với đầu vào Fusion 3MF/STL. Các G-code trong `runs/` chỉ là bản thử, **không đưa vào `print/sliced/`**. Hai file trong `print/prepare/` mở được trong Bambu Studio nhưng chưa có G-code đã kiểm tra. Hai gói v03 cũ được lấy khỏi thư mục làm việc để tránh nhầm; Git giữ lịch sử.
 
 Mỗi lần đánh giá rule tạo bản ghi mới. [checks.md](checks.md) chỉ giữ checklist và trạng thái hiện tại. Slice thành công không xác nhận khả năng chống nước hoặc lắp PCB thực tế.
 
