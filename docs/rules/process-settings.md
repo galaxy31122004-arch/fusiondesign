@@ -15,6 +15,15 @@
 2. Chọn profile process tương thích với nozzle. Layer mỏng hơn khi cần bề mặt cong/chi tiết nhỏ sau khi preview chứng minh nó còn được tạo thành đường in; layer dày hơn khi ưu tiên thời gian và hình học phù hợp. Layer nhỏ không sửa được một lỗ hoặc thành đã bị mất do nozzle/line width.
 3. Đổi layer height phải chạy lại preview để kiểm tra số lớp đáy/mặt trên, bridge, overhang, thời gian và đường thành. Không giữ số lớp cũ mà không kiểm tra **độ dày vật lý** của đáy/mặt trên.
 
+### Mặt cong và bậc lớp
+
+1. Trước khi chốt layer, đánh dấu các mặt cong/mặt nghiêng lộ ra ngoài hoặc dùng để lắp ghép. Xem mặt đó có thay đổi hình dạng theo chiều cao **Z của hướng in hiện tại** không. Nếu có, layer dày có thể tạo bậc thang thấy được; đây là cảnh báo về độ mịn bề mặt, không phải một bán kính hay góc cấm chung.
+2. Slice bằng layer của preset làm mốc, xem các lớp ở vùng cong và mức bậc dự kiến. Khi bậc không phù hợp mục tiêu, so một phương án layer mỏng toàn part với `adaptive/variable layer height` tập trung ở vùng cong nếu Bambu Studio của phiên bản đang dùng hỗ trợ. Giữ layer lớp đầu và mọi lớp biến thiên trong dải nozzle/profile; không tự lấy một giá trị mm cố định làm chuẩn cho mọi vật.
+3. Chọn phương án theo độ mịn ở vùng cần nhìn/chạm/lắp, số lớp đặc hiệu lực, overhang/support, thời gian và vật liệu sau khi slice. Adaptive layer chỉ có ích nếu Preview cho thấy lớp thật sự mỏng hơn ở vùng mục tiêu; in mẫu khi yêu cầu thẩm mỹ hoặc độ khít quan trọng.
+4. Phân biệt nguyên nhân: mặt cong bị đa giác theo **XY** cần kiểm tra độ mịn mesh/export hoặc hình học CAD; đường dọc tại seam cần chỉnh seam; mặt dưới xấu do support cần kiểm tra support/interface. Giảm layer theo Z không tự sửa ba vấn đề này.
+
+Ghi vào `notes/results.md`: vùng bề mặt, hướng in, layer gốc, phương án layer mỏng/adaptive đã thử, dải lớp hiệu lực, ảnh hoặc mô tả Preview, chênh lệch thời gian/vật liệu và kết quả mẫu in. Khi đổi hướng đặt hoặc model, đánh giá lại bậc lớp.
+
 Ví dụ **từ preset P2S cục bộ ngày 2026-10-20**, chỉ để đối chiếu, không phải giới hạn vĩnh viễn:
 
 | Nozzle | Dải layer height trong machine preset | Process preset có sẵn trên máy |

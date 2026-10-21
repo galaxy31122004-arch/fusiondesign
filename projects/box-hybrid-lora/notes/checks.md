@@ -13,6 +13,7 @@
 | BOX-007 | Hướng lắp ngoài trời và đường nước chảy | Chưa chốt | Có tư thế lắp và kiểm tra đọng nước |
 | BOX-008 | Bo góc giữ độ dày thành và khoảng hở | Mesh kín, chưa thử lắp | Đo thành, nắp, PCB và lỗ sau bo trên mẫu thật |
 | BOX-009 | Vành trong thân in được và tháo support được | Đã xem Preview `tree(auto)`; chưa lưu gói in hoặc thử tháo | So kiểu support theo [rule chung](../../../docs/rules/support-selection.md), xem từng lớp và in thử vùng vành/ron |
+| BOX-010 | Viền bo của nắp đạt độ mịn bề mặt mong muốn | Chưa xem riêng bậc lớp ở viền với layer 0,20 mm | So preset 0,20 mm với layer mỏng/adaptive theo [rule mặt cong](../../../docs/rules/process-settings.md#mặt-cong-và-bậc-lớp); xem Preview và in mẫu nếu cần |
 
 **Cảnh báo dùng thử:** bản v1.0.0 có lỗ anten và rãnh ron nhỏ nhưng chưa đo đầu SMA, chưa chọn ron, chưa có lỗ/giải pháp kín cho nguồn DC và chưa có gói Bambu chứa G-code đã xác minh. Hai file `print/prepare/` để mở/chỉnh trong Studio, không phải file gửi máy. Không đặt mạch ngoài mưa.
 

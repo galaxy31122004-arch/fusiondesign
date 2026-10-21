@@ -62,7 +62,7 @@ Vật liệu cần được chọn trước khi chốt các rule phụ thuộc v
 | PRT-004 | Phần nhô và cầu | Vùng cần support hoặc có nguy cơ võng | Chọn và kiểm tra kiểu support theo [rule support](support-selection.md); đổi hướng, sửa hình dạng hoặc chia part khi cần |
 | PRT-005 | Bám bàn và ổn định | Diện tích tiếp xúc nhỏ, chi tiết cao hoặc dễ dịch chuyển | Đổi hướng đặt, thêm brim hoặc sửa mặt đáy nếu phù hợp |
 | PRT-006 | Độ bền theo hướng lớp | Hướng lớp có thể bất lợi cho tải sử dụng | Đổi hướng in, tăng tiết diện hoặc đổi kết cấu |
-| PRT-007 | Chất lượng bề mặt | Mặt cần đẹp hoặc lắp ghép nằm trên support, seam hay mặt chạm bàn | Đổi hướng in, vị trí seam, support hoặc tách chi tiết |
+| PRT-007 | Chất lượng bề mặt | Mặt cần đẹp/lắp ghép nằm trên support, seam, mặt chạm bàn hoặc mặt cong theo Z có nguy cơ bậc lớp | Đổi hướng, seam, support hoặc chọn layer mỏng/adaptive theo [rule mặt cong](process-settings.md#mặt-cong-và-bậc-lớp); tách chi tiết khi cần |
 | PRT-008 | Hình học mesh | Mesh hở, giao nhau, sai đơn vị hoặc mất chi tiết khi xuất | Sửa model hoặc cách export rồi kiểm tra lại trong slicer |
 | PRT-009 | Góc của vật thể dạng hộp | Góc ngoài sắc ở thân hoặc nắp; bo góc có thể làm giảm khoảng hở, bề dày thành hay ảnh hưởng đường ghép | Tạo bán kính bo góc thành tham số; kiểm tra lại lòng hộp, thành, nắp, ron và lỗ sau khi bo |
 

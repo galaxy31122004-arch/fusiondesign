@@ -13,7 +13,7 @@
 
 | Mục | Khi nào giữ hoặc chỉnh | Kiểm tra sau slice |
 | --- | --- | --- |
-| `Layer height` | Bắt đầu từ process khớp nozzle; giảm khi bề mặt cong/chi tiết nhỏ cần rõ hơn, tăng khi ưu tiên thời gian và hình học cho phép. Theo dải nozzle trong [process-settings.md](process-settings.md). | Đường thành, lỗ, overhang, số lớp vỏ và thời gian; không dùng lớp mỏng để thay dung sai thiết kế. |
+| `Layer height` | Bắt đầu từ process khớp nozzle. Với mặt cong/mặt nghiêng thay đổi theo Z, so layer mỏng hoặc adaptive ở đúng vùng cần mịn theo [rule mặt cong](process-settings.md#mặt-cong-và-bậc-lớp); layer dày hơn chỉ khi bậc bề mặt chấp nhận được. | Bậc lớp ở vùng mục tiêu, đường thành/lỗ, overhang, số lớp vỏ và thời gian; không dùng lớp mỏng để thay dung sai thiết kế hay sửa mesh XY thô. |
 | `Initial layer height` | Giữ preset nếu lớp đầu bám ổn; chỉ đổi khi cần giải quyết lỗi lớp đầu đã quan sát trên đúng plate/vật liệu. | Footprint, độ ép lớp đầu, lỗ/rãnh sát bàn và khả năng tháo. |
 | `Mixed color sublayer` | Chỉ xét khi một lớp có nhiều màu và cần chia lớp con; bản một màu giữ tắt. | Màu từng lớp, số lần đổi màu, thời gian và nhựa xả. |
 | `Seam position` | Chọn vị trí để tránh mặt ghép, mặt ron, lỗ và mặt trưng bày; `Aligned` gom vết vào một đường, các cách khác phải so trên hình thật. | Đường seam trên từng lớp và chỗ bắt đầu/kết thúc gần bề mặt chức năng. |
