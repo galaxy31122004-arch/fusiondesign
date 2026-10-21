@@ -31,7 +31,7 @@ File thân trong `print/prepare/` là 3MF mesh xuất từ Fusion nên Bambu Stu
 
 ## Trạng thái in
 
-- Thân v1.0.0 cần support dưới vành trong: slice không support báo `floating cantilever`; bật `normal(auto)` bỏ warning nhưng ước tính tăng từ 181,6 g lên 267,5 g. Cần xem preview và khả năng tháo support khỏi khoang trước khi in.
+- Thân v1.0.0 cần support dưới vành trong: slice không support báo `floating cantilever`. Lần thử CLI với `normal(auto)` ước tính 267,5 g; Preview GUI với `tree(auto)` ước tính tổng 212,02 g, trong đó support 30,41 g. Hai lần thử chưa cùng đường chạy nên chưa kết luận kiểu nào tốt hơn. Theo [rule chọn support](../../docs/rules/support-selection.md), cần so trên cùng profile, xem từng lớp sát vành/ron và thử tháo trước khi chốt; chưa có gói in cuối.
 - Nắp v1.0.0 slice thử không báo warning. Bambu CLI trên máy tạo G-code tạm nhưng lỗi khi xuất gói 3MF, vì vậy `print/sliced/` chưa có bản v1.0.0.
 - Chưa có lỗ/giải pháp làm kín cho nguồn DC cắm trực tiếp; ron và đầu SMA chưa thử lắp. Không dùng nguyên mẫu này làm hộp ngoài trời có mạch đang cấp điện.
 

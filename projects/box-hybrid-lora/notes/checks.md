@@ -12,7 +12,7 @@
 | BOX-006 | Vật liệu và profile P2S phù hợp | Slice thử v1.0.0; chưa có gói in | Xem preview GUI, xác nhận màu/plate/nozzle thực và xuất gói 3MF |
 | BOX-007 | Hướng lắp ngoài trời và đường nước chảy | Chưa chốt | Có tư thế lắp và kiểm tra đọng nước |
 | BOX-008 | Bo góc giữ độ dày thành và khoảng hở | Mesh kín, chưa thử lắp | Đo thành, nắp, PCB và lỗ sau bo trên mẫu thật |
-| BOX-009 | Vành trong thân in được và tháo support được | Cần support; chưa xem preview GUI | Xem từng lớp và in thử vùng vành/ron, hoặc sửa hình học để giảm support |
+| BOX-009 | Vành trong thân in được và tháo support được | Đã xem Preview `tree(auto)`; chưa lưu gói in hoặc thử tháo | So kiểu support theo [rule chung](../../../docs/rules/support-selection.md), xem từng lớp và in thử vùng vành/ron |
 
 **Cảnh báo dùng thử:** bản v1.0.0 có lỗ anten và rãnh ron nhỏ nhưng chưa đo đầu SMA, chưa chọn ron, chưa có lỗ/giải pháp kín cho nguồn DC và chưa có gói Bambu chứa G-code đã xác minh. Hai file `print/prepare/` để mở/chỉnh trong Studio, không phải file gửi máy. Không đặt mạch ngoài mưa.
 

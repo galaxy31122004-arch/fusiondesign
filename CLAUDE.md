@@ -90,9 +90,10 @@ FusionDesign/
 
 ### Rule áp dụng theo thứ tự
 
-1. `docs/rules/printability.md` (PRT-001–PRT-008): kiểm tra trước thiết kế, trong Fusion, trước in.
+1. `docs/rules/printability.md` (PRT-001–PRT-009) và `docs/rules/support-selection.md`: kiểm tra trước thiết kế, trong Fusion, trước in; chọn support qua Preview của Bambu Studio.
 2. `docs/rules/material.md` (MAT-001–MAT-006): chọn vật liệu, khớp preset máy + nozzle + vật liệu, chạy lại khi đổi cấu hình.
 3. `docs/rules/process-settings.md`: nhiệt, layer theo nozzle, wall/top/bottom, infill; ghi mọi lệch preset.
+   `docs/rules/bambu-studio-controls.md`: bảng quyết định cho từng mục Quality, Strength, Support và Others trong Bambu Studio.
 4. `docs/rules/outdoor-enclosure.md`: hộp điện tử ngoài trời — ron liên tục, vít ngoài đường ron, mỗi lỗ xuyên vỏ có cách kín riêng, thử nước trên vỏ không cấp điện, không công bố IP khi chưa thử đúng phương pháp.
 5. `docs/rules/plate-layout.md`: nhiều part thì đánh giá cả chung và tách plate; khoảng cách đo sau brim/support/skirt/wipe tower, không dùng bbox mesh trần làm khoảng an toàn.
 6. `docs/rules/model-source.md`: tự dựng tham số hay nhập model ngoài/AI; kích thước chức năng phải đo lại.

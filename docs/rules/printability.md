@@ -8,6 +8,8 @@ Các kiểm tra phụ thuộc vật liệu phải áp dụng thêm [material.md]
 
 Với nhiều part, áp dụng thêm [plate-layout.md](plate-layout.md) để quyết định bố cục in và kiểm tra brim/support, mép plate cùng trình tự in.
 
+Khi model cần support, áp dụng [support-selection.md](support-selection.md) để chọn kiểu trong Bambu Studio và ghi kết quả so sánh theo từng part.
+
 Máy mặc định là **Bambu Lab P2S Full Combo** theo lựa chọn của người dùng. Tên cấu hình này không tự xác định nozzle, vật liệu, bàn in, phụ kiện đang lắp hay profile; các mục đó vẫn phải được ghi hoặc đánh dấu `Chưa chọn` cho từng lần in.
 
 Không coi việc Fusion tạo được model hoặc Bambu Studio slice thành công là bằng chứng chi tiết sẽ in đạt yêu cầu. Một cảnh báo chỉ được đóng khi đã sửa, đã kiểm chứng bằng dữ liệu phù hợp, hoặc người dùng chấp nhận rủi ro có ghi lại.
@@ -57,7 +59,7 @@ Vật liệu cần được chọn trước khi chốt các rule phụ thuộc v
 | PRT-001 | Kích thước máy | Model hoặc cách đặt vượt vùng in đã xác minh | Xoay, chia part hoặc đổi kích thước nếu chức năng cho phép |
 | PRT-002 | Thành và đáy | Vùng mỏng hoặc không đồng đều so với yêu cầu sử dụng và profile | Tăng bề dày, đổi hình học, điều chỉnh wall hoặc thử mẫu |
 | PRT-003 | Lỗ và khe lắp | Kích thước danh nghĩa có thể không đạt sau in | Thêm dung sai dựa trên mẫu thử, đổi hướng in hoặc gia công sau in |
-| PRT-004 | Phần nhô và cầu | Vùng cần support hoặc có nguy cơ võng | Đổi hướng đặt, sửa hình dạng, chia part hoặc thêm support |
+| PRT-004 | Phần nhô và cầu | Vùng cần support hoặc có nguy cơ võng | Chọn và kiểm tra kiểu support theo [rule support](support-selection.md); đổi hướng, sửa hình dạng hoặc chia part khi cần |
 | PRT-005 | Bám bàn và ổn định | Diện tích tiếp xúc nhỏ, chi tiết cao hoặc dễ dịch chuyển | Đổi hướng đặt, thêm brim hoặc sửa mặt đáy nếu phù hợp |
 | PRT-006 | Độ bền theo hướng lớp | Hướng lớp có thể bất lợi cho tải sử dụng | Đổi hướng in, tăng tiết diện hoặc đổi kết cấu |
 | PRT-007 | Chất lượng bề mặt | Mặt cần đẹp hoặc lắp ghép nằm trên support, seam hay mặt chạm bàn | Đổi hướng in, vị trí seam, support hoặc tách chi tiết |
